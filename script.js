@@ -31,6 +31,8 @@ const drop = ({ target }) => {
 };
 
 const createCard = ({ target }) => {
+    if(!target.classList.contains("column_cards")) return;
+
     const card = document.createElement("section");
 
     card.className = "card";
@@ -45,11 +47,8 @@ const createCard = ({ target }) => {
     card.addEventListener("dragstart", dragStart);
 
     target.append(card);
+    card.focus();
 };
-
-cards.forEach((card) => {
-    card.addEventListener("dragstart", dragStart);
-});
 
 columns.forEach((column) => {
     column.addEventListener("dragover", dragOver);
