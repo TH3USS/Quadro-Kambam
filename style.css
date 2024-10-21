@@ -70,3 +70,33 @@ header > h1{
     background-color: #deebff;
     border: 2px solid #2482ff;
 }
+
+.process_class{
+    background-color:#e7e3bc;
+    
+    h2{
+        color: #9b6e1c;
+    }
+}
+
+.card_process{
+    background-color:#f7f5e9;
+    color: #9b6e1c;
+    border: 1px solid #cec9a0;
+    box-shadow: 0 2px 2px #cec9a0;
+}
+
+.done_class{
+    background-color:#bde7bc;
+    
+    h2{
+        color: #1b7022;
+    }
+}
+
+.card_done{
+    background-color:#eef8ec;
+    color: #1b7022;
+    border: 1px solid #a3cea2;
+    box-shadow: 0 2px 2px #a3cea2;
+}

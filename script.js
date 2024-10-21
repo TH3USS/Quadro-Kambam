@@ -16,6 +16,9 @@ const dragEnter = ({ target }) => {
     {
         target.classList.add("column-highlight");
     }
+    if(target.classList.contains("2")){
+        target.classList.add("class2");
+    }
 };
 
 const dragLeave = ({ target }) => {    
@@ -27,6 +30,19 @@ const drop = ({ target }) => {
     {
         target.classList.remove("column-highlight");   
         target.append(draggedCard);
+
+        if(target.classList.contains("process_class")){
+            draggedCard.classList.add("card_process")
+            draggedCard.classList.remove("card_done")
+        }
+        else if(target.classList.contains("done_class")){
+            draggedCard.classList.add("card_done")
+        }
+        else{
+            draggedCard.classList.remove("card_done")
+            draggedCard.classList.remove("card_process")
+        }
+        
     }
 };
 
