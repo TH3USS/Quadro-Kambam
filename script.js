@@ -13,22 +13,30 @@ const dragOver = (event) => {
 
 const dragEnter = ({ target }) => {
     if(target.classList.contains("column_cards"))
-    {
-        target.classList.add("column-highlight");
-    }
-    if(target.classList.contains("2")){
-        target.classList.add("class2");
+    {        
+        if(target.classList.contains("process_class")){
+            target.classList.add("column-highlight_process");
+        }
+        else if(target.classList.contains("done_class")){
+            target.classList.add("column-highlight_done");
+        } else{
+            target.classList.add("column-highlight");
+        }
     }
 };
 
 const dragLeave = ({ target }) => {    
-    target.classList.remove("column-highlight");    
+    target.classList.remove("column-highlight");
+    target.classList.remove("column-highlight_process");
+    target.classList.remove("column-highlight_done");
 };
 
 const drop = ({ target }) => {
     if(target.classList.contains("column_cards"))
     {
-        target.classList.remove("column-highlight");   
+        target.classList.remove("column-highlight");  
+        target.classList.remove("column-highlight_process");
+        target.classList.remove("column-highlight_done"); 
         target.append(draggedCard);
 
         if(target.classList.contains("process_class")){
@@ -54,6 +62,13 @@ const createCard = ({ target }) => {
     card.className = "card";
     card.draggable = "true";
     card.contentEditable = "true";
+
+    if(target.classList.contains("process_class")){
+        card.classList.add("card_process")
+    }
+    if(target.classList.contains("done_class")){
+        card.classList.add("card_done")
+    }
 
     card.addEventListener("focusout", () => {
         card.contentEditable ="false";

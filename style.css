@@ -66,11 +66,6 @@ header > h1{
     margin-bottom: 5px;
 }
 
-.column-highlight{
-    background-color: #deebff;
-    border: 2px solid #2482ff;
-}
-
 .process_class{
     background-color:#e7e3bc;
     
@@ -99,4 +94,19 @@ header > h1{
     color: #1b7022;
     border: 1px solid #a3cea2;
     box-shadow: 0 2px 2px #a3cea2;
+}
+
+.column-highlight{
+    background-color: #deebff;
+    border: 2px solid #2482ff;
+}
+
+.column-highlight_process{
+    background-color: #c3e7bc;
+    border: 2px solid #2482ff;
+}
+
+.column-highlight_done{
+    background-color: #bce7e1;
+    border: 2px solid #2482ff;
 }
