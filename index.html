@@ -4,41 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/kambam.css">
+    <link rel="stylesheet" href="./style/list.css">
     <title>Document</title>
 </head>
 
 <body>
     <main>
-        <header>
-            <span>Projects / Kambam</span>
-            <h1>Board</h1>
-        </header>
+        <section>
+            <div class="container">
+                <div class="todo-app">
+                    <h2>To-Do List <img src="img/icon.png"></h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add your text">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+            
+                    <ul id="list-container">
+                      <li>Taks</li>
+                    </ul>
+            
+                </div>
+            </div>    
+        </section>
+        <section>
+            <header>
+                <span>Projects / Kambam</span>
+                <h1>Board</h1>
+            </header>
 
-        <section class="columns">
-            <section class="column">
-                <h2 class="column_title">To Do</h2>
+            <section class="columns">
+                <section class="column">
+                    <h2 class="column_title">To Do</h2>
 
-                <section class="column_cards"></section>
-            </section>
+                    <section class="column_cards"></section>
+                </section>
 
-            <section class="column process_class">
-                <h2 class="column_title">In Progress</h2>
+                <section class="column process_class">
+                    <h2 class="column_title">In Progress</h2>
 
-                <section class="column_cards process_class"></section>
+                    <section class="column_cards process_class"></section>
 
-            </section>
+                </section>
 
-            <section class="column done_class">
-                <h2 class="column_title">Done</h2>
+                <section class="column done_class">
+                    <h2 class="column_title">Done</h2>
 
-                <section class="column_cards done_class"></section>
+                    <section class="column_cards done_class"></section>
 
+                </section>
             </section>
         </section>
 
     </main>
-    <script src="script.js"></script>
+    <script src="./scripts/kambamScript.js"></script>
+    <script src="./scripts/listScript.js"></script>
 </body>
 
 </html>
